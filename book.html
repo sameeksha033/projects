@@ -1,0 +1,62 @@
+<html>
+<head>
+    <script>
+        function myalert(){
+            alert("Successfully Booked");
+        }
+    </script>
+<style>
+section#booking {
+    padding: 2em 1em;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin: 0.5em 0 0.2em;
+}
+
+input[type="text"], input[type="date"], input[type="time"] {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background: #0056b3;
+}
+</style>
+</head>
+<section id="booking">
+    <h2>Book a Lesson</h2>
+    <form>
+        <label for="name">Name:</label><input type="text" id="name" name="name" required><br>
+		<label>Email id:</label><br> <input type="email" name="EMAIL"><br>
+		<label>Phone Number</label><br> <input type="tel" name="NO"><br>
+		<label for="date">Preferred Date:</label><input type="date" id="date" name="date" required><br>
+        <label for="time">Preferred Time:</label><input type="time" id="time" name="time" required><br>
+        <button onclick="myalert()">Book Now</button>
+    </form>
+</section>
+</html>
+
+
+
+
+

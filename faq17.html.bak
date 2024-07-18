@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving Class FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .faq-container {
+            width: 80%;
+            margin: auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .faq-question {
+            cursor: pointer;
+            font-weight: bold;
+            margin: 0;
+        }
+        .faq-answer {
+            display: none;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-item">
+            <p class="faq-question">What are the prerequisites for taking driving classes?</p>
+            <div class="faq-answer">
+                <p>To enroll in our driving classes, you must have a valid learner's permit and be at least 16 years old.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question">How long are the driving lessons?</p>
+            <div class="faq-answer">
+                <p>Each driving lesson lasts approximately one hour. We also offer extended lessons upon request.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question">What is the cost of the driving course?</p>
+            <div class="faq-answer">
+                <p>The cost of our standard driving course is $300, which includes 10 hours of behind-the-wheel instruction and classroom sessions.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question">Do you offer weekend classes?</p>
+            <div class="faq-answer">
+                <p>Yes, we offer both weekday and weekend classes to accommodate different schedules.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const answer = event.target.nextElementSibling;
+                if (answer.style.display === "none" || answer.style.display === "") {
+                    answer.style.display = "block";
+                } else {
+                    answer.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

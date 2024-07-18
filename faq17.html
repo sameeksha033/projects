@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving Class FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .faq-container {
+            width: 80%;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .faq-question {
+            cursor: pointer;
+            font-weight: bold;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            transition: background-color 0.3s;
+            color: #0056b3;
+        }
+        .faq-question:hover {
+            background-color: #e9e9e9;
+        }
+        .faq-answer {
+            display: none;
+            margin: 10px 0;
+            padding-left: 20px;
+            color: #333;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 18px;
+            color: #0056b3;
+        }
+        .faq-question.active::after {
+            content: '-';
+        }
+    </style>
+</head>
+<body>
+    <div class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-item">
+            <p class="faq-question">What are the prerequisites for taking driving classes?</p>
+            <div class="faq-answer">
+                <p>To enroll in our driving classes, you must have a valid learner's permit and be at least 16 years old.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question">How long are the driving lessons?</p>
+            <div class="faq-answer">
+                <p>Each driving lesson lasts approximately one hour. We also offer extended lessons upon request.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question">What is the cost of the driving course?</p>
+            <div class="faq-answer">
+                <p>The cost of our standard driving course is $300, which includes 10 hours of behind-the-wheel instruction and classroom sessions.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question">Do you offer weekend classes?</p>
+            <div class="faq-answer">
+                <p>Yes, we offer both weekday and weekend classes to accommodate different schedules.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question">Can I reschedule my driving lesson?</p>
+            <div class="faq-answer">
+                <p>Yes, you can reschedule your driving lesson with at least 24 hours notice. Please contact our office to make arrangements.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question">Do you provide a car for the driving test?</p>
+            <div class="faq-answer">
+                <p>Yes, we provide a car for the driving test if you have completed our driving course. Additional fees may apply.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question">What safety measures are in place during lessons?</p>
+            <div class="faq-answer">
+                <p>All our vehicles are equipped with dual controls and are regularly sanitized. Instructors follow strict safety protocols.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const answer = event.target.nextElementSibling;
+                event.target.classList.toggle('active');
+                if (answer.style.display === "none" || answer.style.display === "") {
+                    answer.style.display = "block";
+                } else {
+                    answer.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

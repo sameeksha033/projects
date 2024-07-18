@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contactus.css">
+    <script>
+        function myalert(){
+            alert("Message Sent Successfully");
+        }
+    </script>
+</head>
+<body>
+    <div class="contact-container">
+        <header class="header">
+            <img src="./images/logo.jpg" alt="Company Logo" class="logo">
+        </header>
+        <h1>Contact Us</h1>
+        <div class="contact-content">
+            <form  class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button onclick="myalert()">Submit</button>
+            </form>
+            <div class="contact-info">
+                <h2>Our Address</h2>
+                <p>101 Golden Gate Bridge,<br>
+                    San Francisco, CA 94129</p>
+                <h2>Call Us</h2>
+                <p>(123) 456-7890</p>
+                <h2>Email Us</h2>
+                <p>safedrive@company.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
